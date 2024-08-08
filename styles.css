@@ -155,6 +155,7 @@ footer {
   gap: 5px;
   color: white;
   font-size: 14px;
+  margin-top: auto;
 }
 
 @media only screen and (max-width: 900px) {
