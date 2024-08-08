@@ -40,8 +40,45 @@
 
       <section id="information">
         <div class="dropdown">
-          <p>Informações</p>
-          <img src="arrow.png" alt="Arrow icon" />
+          <div class="dropdown-info">
+            <p>Sobre o aplicativo</p>
+            <img src="down-arrow.svg" alt="Arrow icon" />
+          </div>
+          <div class="expanded">
+            <p>
+              Minha Saúde Móvel é um aplicativo de gestão de saúde pessoal que
+              permite monitorar e gerenciar diversos aspectos de sua saúde de
+              maneira prática. Através do aplicativo, você pode registrar
+              consultas médicas, acompanhar a administração de medicamentos, e
+              manter uma carteira de vacinação digital.<br /><br />Além disso, é
+              possível ativar lembretes (notificações) para lembrar de tomar
+              vacinas, realizar consultas e tomar medicamentos, assim
+              facilitando a sua rotina de saúde.<br /><br />É importante
+              destacar que todos os dados inseridos no aplicativo são de total
+              responsabilidade do usuário e não possuem caráter oficial. O Minha
+              Saúde Móvel serve como uma ferramenta de apoio e organização
+              pessoal, não substituindo documentos médicos oficiais ou
+              profissionais de saúde.
+            </p>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <div class="dropdown-info">
+            <p>Avaliadores</p>
+            <img src="down-arrow.svg" alt="Arrow icon" />
+          </div>
+          <div class="expanded">
+            <p>
+              Se você for um avaliador e deseja acessar uma conta de teste que
+              já possui dados cadastrados no aplicativo, siga as seguintes
+              instruções:<br /><br />No e-mail, utilize o seu primeiro nome
+              seguido do último sobrenome e adicione `@test.com`. A senha padrão
+              é ´tsi2024´<br /><br />Exemplo:<br />Email: joaosilva@test.com<br />Senha:
+              tsi2024<br /><br />Sinta-se à vontade para criar uma nova conta e
+              explorar os processos de autenticação do aplicativo também.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -51,4 +88,25 @@
       </footer>
     </div>
   </body>
+
+  <script>
+    const dropdownList = document.querySelectorAll('.dropdown');
+    const dropdownInfoList = document.querySelectorAll('.dropdown-info');
+    const expandedList = document.querySelectorAll('.expanded');
+    const arrowImgList = document.querySelectorAll('.dropdown-info img');
+
+    dropdownInfoList.forEach((dropdownInfo, index) => {
+      dropdownInfo.addEventListener('click', () => {
+        if (expandedList[index].style.display === 'flex') {
+          expandedList[index].style.display = 'none';
+          arrowImgList[index].style.rotate = '0deg';
+          dropdownInfo.style.borderRadius = '8px';
+        } else {
+          expandedList[index].style.display = 'flex';
+          arrowImgList[index].style.rotate = '180deg';
+          dropdownInfo.style.borderRadius = '8px 8px 0 0';
+        }
+      });
+    });
+  </script>
 </html>

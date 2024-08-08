@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
-  width: 100%;
+  width: calc(100%);
   height: 100%;
   min-height: 100vh;
   background-color: #eeeeee;
@@ -20,7 +24,7 @@
 
 section#welcome {
   text-align: center;
-  margin: 50px 100px 0 100px;
+  margin: 50px 50px 0 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -50,8 +54,14 @@ section#logo img {
   flex-direction: column;
   gap: 15px;
   font-size: 24px;
+  margin: 0 50px;
   font-weight: 500;
   align-items: center;
+}
+
+#download > p {
+  color: #008484;
+  text-align: center;
 }
 
 #download a {
@@ -80,41 +90,153 @@ section#logo img {
 #download a img {
   width: 28px;
   height: 28px;
+  min-width: 28px;
+  max-width: 28px;
+  min-height: 28px;
+  max-height: 28px;
 }
 
 section#information {
-  margin: 50px 0px;
+  margin: 50px 0;
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 section#information .dropdown {
   width: 60%;
   display: flex;
+  flex-direction: column;
+}
+
+section#information .dropdown .dropdown-info {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 24px;
-  border: 1px solid black;
   border-radius: 8px;
   padding: 16px 32px;
   cursor: pointer;
+  background-color: #008484;
+  color: white;
 }
 
-section#information .dropdown img {
+.dropdown-info p {
+  text-shadow: 0 0 8px #000000;
+}
+
+section#information .dropdown-info img {
   width: 32px;
   min-width: 32px;
   max-width: 32px;
+  transition: 0.3s;
+}
+
+#information .expanded {
+  background-color: #008484;
+  border-radius: 0 0 8px 8px;
+  display: none;
+  padding: 16px 32px;
+  color: white;
+  text-shadow: 0 0 5px #000000;
+  line-height: 25px;
 }
 
 footer {
-  width: 100%;
+  width: calc(100% - 48px);
   background-color: #008484;
   display: flex;
-  padding: 16px 0;
+  padding: 16px 24px;
   flex-direction: column;
   text-align: center;
   gap: 5px;
   color: white;
   font-size: 14px;
+}
+
+@media only screen and (max-width: 900px) {
+  section#information {
+    width: calc(100% - 100px);
+    margin: 50px;
+  }
+
+  section#information .dropdown {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #welcome h1 {
+    font-size: 32px;
+  }
+
+  #welcome p {
+    font-size: 18px;
+  }
+
+  #download > p {
+    font-size: 18px;
+  }
+
+  #download a {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+
+  #download a img {
+    width: 22px;
+    height: 22px;
+    min-height: 22px;
+    max-height: 22px;
+    min-width: 22px;
+    max-width: 22px;
+  }
+
+  section#information {
+    width: calc(100% - 48px);
+    margin: 24px;
+  }
+
+  section#information .dropdown .dropdown-info {
+    font-size: 18px;
+    padding: 16px 32px;
+  }
+
+  section#information .dropdown-info img {
+    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  #welcome h1 {
+    font-size: 28px;
+  }
+
+  section#welcome {
+    margin: 50px 24px 0 24px;
+  }
+
+  #download a {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+
+  #download a p {
+    display: none;
+  }
+
+  #download a img {
+    width: 22px;
+    height: 22px;
+    min-height: 22px;
+    max-height: 22px;
+    min-width: 22px;
+    max-width: 22px;
+  }
 }
