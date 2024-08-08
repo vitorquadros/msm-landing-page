@@ -1,0 +1,120 @@
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #eeeeee;
+
+  font-family: 'Inter', sans-serif;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+#start {
+  width: 100%;
+  height: 50px;
+  background-color: #008484;
+}
+
+section#welcome {
+  text-align: center;
+  margin: 50px 100px 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#welcome h1 {
+  font-size: 58px;
+  font-weight: 700;
+  color: #008484;
+}
+
+#welcome p {
+  font-size: 24px;
+  color: #008484;
+  font-weight: 500;
+}
+
+section#logo img {
+  margin: 25px 0;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+#download {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  align-items: center;
+}
+
+#download a {
+  outline: none;
+  border: none;
+  background-color: #008484;
+  color: white;
+  padding: 16px 64px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+#download a:hover {
+  background-color: #00a6a6;
+}
+
+#download a img {
+  width: 28px;
+  height: 28px;
+}
+
+section#information {
+  margin: 50px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section#information .dropdown {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+section#information .dropdown img {
+  width: 32px;
+  min-width: 32px;
+  max-width: 32px;
+}
+
+footer {
+  width: 100%;
+  background-color: #008484;
+  display: flex;
+  padding: 16px 0;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  color: white;
+  font-size: 14px;
+}
