@@ -139,11 +139,18 @@ section#information .dropdown-info img {
   background-color: #008484;
   border-radius: 0 0 8px 8px;
   display: none;
+
+  gap: 10px;
   padding: 16px 32px;
   color: white;
   text-shadow: 0 0 5px #000000;
   line-height: 25px;
 }
+
+#information .expanded img {
+  max-width: 300px;
+}
+
 
 footer {
   width: calc(100% - 48px);
@@ -212,6 +219,8 @@ footer {
     max-width: 24px;
     margin-left: 10px;
   }
+
+
 }
 
 @media only screen and (max-width: 424px) {
@@ -240,4 +249,10 @@ footer {
     min-width: 22px;
     max-width: 22px;
   }
+
+  #information .expanded img {
+    max-width: 100%;
+    width: 100%;
+  }
+  
 }
